@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InFocus</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+         <nav>
+             <div class="logo">
+                 In<span>Fo</span>cus
+             </div>
+             <center>
+             <div class="menu">
+                <li class="links"><a href="#home">Home</a></li>
+                 <li class="links"><a href="#about">About</a></li>
+                 <li class="links"><a href="#gallery">Gallery</a></li>
+                 <li class="links"><a href="#">Contact</a></li>
+             </div>
+             </center>
+
+             <div class="icon">
+                 <i class = "fa fa-search"></i>
+                 <a href="#">Login</a>
+             </div>
+         </nav>
+         <section id="home" class="h-text">
+             <i class="fa fa-camera" id="camera"></i>
+             <h1 data-aos="fade-up"> When words become unclear, We shall focus with <span>photographs</span>.</h1>
+             <input type="text" name="" placeholder="Search here..">
+             <button><i class="fa fa-search"></i></button>
+         </section>
+    </header>
+    <section id="gallery" class="filter-gallery">
+       <div class="portfolio-menu">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".nature">Nature</li>
+                <li data-filter=".fashion">Fashion</li>
+                <li data-filter=".wedding">Wedding</li>
+            </ul>
+        </div>
+        <div class="portfolio-item">
+
+            <div class="item nature" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+                <img src="nature.jpeg" height="100" width="100">
+            </div>
+
+            <div class="item fashion" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="100">
+                <img src="fashion.jpeg" height="100" width="100">
+            </div>
+            <div class="item wedding" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+                <img src="wedding.png" height="100" width="100">
+            </div>
+
+            <div class="item nature" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="100">
+                <img src="nature4.jpeg" height="100" width="100">
+            </div>
+
+            <div class="item nature" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+                <img src="nature1.jpeg" height="100" width="100">
+            </div>
+
+            <div class="item fashion" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="100">
+                <img src="fashion2.jpeg" height="100" width="100">
+            </div>
+            <div class="item wedding" >
+                <img src="wedding3.jpeg" height="100" width="100">
+            </div>
+
+            <div class="item wedding" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+                <img src="wedding2.jpeg" height="100" width="100">
+            </div>
+            <div class="item nature" >
+                <img src="nature2.jpeg" height="100" width="100">
+            </div>
+
+            <div class="item fashion" >
+                <img src="fashion3.jpeg" height="100" width="100">
+            </div>
+           
+           
+
+            <div class="item fashion">
+                <img src="fashion4.jpeg" height="100" width="100">
+            </div>
+            <div class="item wedding" >
+                <img src="wedding4.jpeg" height="100" width="100">
+            </div>
+
+
+        </div>
+       
+    </section>
+
+    <section id="about" class="aboutme">
+        <div class="about-info" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="300">
+
+            <h1> About <span>Me</span> </h1>
+            <p> Why you should hire me</p>
+        </div>
+        <div class="about-card" data-aos="zoom-in-down" data-aos-offset="100" data-aos-delay="200" >
+            <img id="photoemma" src="photographer.jpeg">
+            <p>
+                I love photography, travel and to meet new beautiful people all over the world.
+                My style and approach is simple, bold, classic, and true. My greatest talents are the ability to mix with any class of people and to get nervous subjects to relax in front of my camera. 
+
+
+            </p>
+            <h2> Emma Smith</h2>
+             <img src="whatspp.jpeg" width="100">
+             <img src="insta.jpeg" width="100">
+             <img src="email.png" width="100">
+        </div>
+
+        <div class="m-images" data-aos="zoom-in" data-aos-offset="100">
+            <img src="model1.jpeg">
+            <img src="model3.jpeg">
+            <img src="model6.jpeg">
+            <img src="model2.jpeg">
+            <img src="model5.jpeg">
+            <img src="model4.jpeg">
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script> 
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+    $('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+    $('.portfolio-menu ul li').click(function(){
+    $('.portfolio-menu ul li').removeClass('active');
+    $(this).addClass('active');    
+    
+        var selector = $(this).attr('data-filter');
+        $('.portfolio-item').isotope({
+            filter:selector
+        });
+        return false;
+
+    });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
